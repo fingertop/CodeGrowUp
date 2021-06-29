@@ -25,9 +25,9 @@ hs_err_pid*
 
 ###
 HELP.md
-target/
 mvnw*
-!.mvn/wrapper
+**/.mvn/
+target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
