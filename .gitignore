@@ -26,7 +26,7 @@ hs_err_pid*
 ###
 HELP.md
 target/
-mvnw
+mvnw*
 !.mvn/wrapper
 !**/src/main/**/target/
 !**/src/test/**/target/
