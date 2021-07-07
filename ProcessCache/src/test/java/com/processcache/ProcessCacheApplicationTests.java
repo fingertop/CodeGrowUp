@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cache.CacheManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -19,8 +20,13 @@ public class ProcessCacheApplicationTests {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private CacheManager cacheManager;
+
     @Test
     public void test() throws Exception {
+        System.out.println("CacheManager type : " + cacheManager.getClass());
+
         // 创建1条记录
         userRepository.save(new User("AAA", 10));
 
