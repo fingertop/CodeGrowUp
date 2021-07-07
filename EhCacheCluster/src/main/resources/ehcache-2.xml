@@ -1,0 +1,24 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd">
+	
+	<cache name="users"
+	       maxEntriesLocalHeap="200"
+	       timeToLiveSeconds="600">
+		<cacheEventListenerFactory
+				class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+				properties="replicateAsynchronously=true,
+            replicatePuts=true,
+            replicateUpdates=true,
+            replicateUpdatesViaCopy=false,
+            replicateRemovals=true "/>
+	</cache>
+	
+	<cacheManagerPeerProviderFactory
+			class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
+			properties="hostName=127.0.0.1,
+                        port=8095,
+                        socketTimeoutMillis=2000,
+                        peerDiscovery=manual,
+                        rmiUrls=//127.0.0.1:8094/users" />
+
+</ehcache>
