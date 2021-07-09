@@ -25,18 +25,18 @@ public class UploadController {
         return "upload";
     }
 
-    //@PostMapping("/upload")
-    //@ResponseBody
-    //public String create(@RequestPart MultipartFile file) throws IOException {
-    //    String fileName = file.getOriginalFilename();
-    //    String filePath = path + fileName;
-    //
-    //    File dest = new File(filePath);
-    //    Files.copy(file.getInputStream(), dest.toPath());
-    //    return "Upload file success : " + dest.getAbsolutePath();
-    //}
-
     @PostMapping("/upload")
+    @ResponseBody
+    public String create(@RequestPart MultipartFile file) throws IOException {
+        String fileName = file.getOriginalFilename();
+        String filePath = path + fileName;
+
+        File dest = new File(filePath);
+        Files.copy(file.getInputStream(), dest.toPath());
+        return "Upload file success : " + dest.getAbsolutePath();
+    }
+
+    @PostMapping("/uploads")
     @ResponseBody
     public String create(@RequestPart MultipartFile[] files) throws IOException {
         StringBuffer message = new StringBuffer();
