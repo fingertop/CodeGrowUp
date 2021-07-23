@@ -1,11 +1,11 @@
 # 非对称加密
 # keytool密钥和证书管理工具
-encrypt:
-  key-store:
-    location: config-server.keystore
-    alias: config-server
-    password: 111111
-    secret: 222222
+#encrypt:
+#  key-store:
+#    location: config-server.keystore
+#    alias: config-server
+#    password: 111111
+#    secret: 222222
 
 ##生成命令 git bash 窗口下不能换行
 #keytool -genkeypair -alias config-server -keyalg RSA \

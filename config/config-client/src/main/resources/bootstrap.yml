@@ -1,17 +1,32 @@
-spring:
-  application:
-    name: config-client
-  cloud:
-    config:
-      uri: http://localhost:1201/
-      profile: dev
-      label: master
+#spring:
+#  application:
+#    name: config-client
+#  cloud:
+#    config:
+#      uri: http://localhost:1201/
+#      profile: dev
+#      label: master
 
 server:
   port: 1202
 
 #配置在bootstrap.yml中，这样config-server中的配置信息才能被其他应用正确加载。
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-server
+      profile: dev
+      label: master
 
 
 

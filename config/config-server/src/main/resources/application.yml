@@ -11,6 +11,11 @@ spring:
 server:
   port: 1201
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+
 
 #比如，要访问master分支，config-client应用的dev环境，就可以访问这个url：
 #http://localhost:1201/config-client/dev/master
