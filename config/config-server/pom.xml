@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tiga</groupId>
-    <artifactId>config-client</artifactId>
+    <artifactId>config-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>config-client</name>
+    <name>config-server</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -65,7 +65,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.1.18.RELEASE</version>
                 <configuration>
-                    <mainClass>com.tiga.configclient.ConfigClientApplication</mainClass>
+                    <mainClass>com.tiga.configserver.ConfigServerApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
