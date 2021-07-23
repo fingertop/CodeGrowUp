@@ -2,4 +2,5 @@
 
 # 延伸阅读
 *   https://blog.didispace.com/spring-cloud-starter-dalston-2-3/
+*   https://blog.didispace.com/spring-cloud-starter-dalston-2-4/
 
