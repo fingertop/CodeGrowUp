@@ -10,6 +10,8 @@
 
     <modules>
         <module>eureka-consumer-feign</module>
+        <module>eureka-feign-upload-client</module>
+        <module>eureka-feign-upload-server</module>
     </modules>
 
     <properties>
