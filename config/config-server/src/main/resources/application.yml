@@ -1,11 +1,15 @@
-# 应用名称
-spring.application.name=config-server
-
-spring.cloud.config.server.git.uri=https://github.com/fingertop/config-repo.git
-spring.cloud.config.server.git.username=username
-spring.cloud.config.server.git.password=password
-
-server.port: 1201
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fingertop/config-repo.git
+          username: username
+          password: password
+server:
+  port: 1201
 
 
 #比如，要访问master分支，config-client应用的dev环境，就可以访问这个url：
@@ -16,3 +20,5 @@ server.port: 1201
 #/{label}/{application}-{profile}.yml
 #/{application}-{profile}.properties
 #/{label}/{application}-{profile}.properties
+
+#配置在yml，这样config-server中的配置信息才能被其他应用正确加载。
