@@ -1,0 +1,20 @@
+# 非对称加密
+# keytool密钥和证书管理工具
+encrypt:
+  key-store:
+    location: config-server.keystore
+    alias: config-server
+    password: 111111
+    secret: 222222
+
+##生成命令 git bash 窗口下不能换行
+#keytool -genkeypair -alias config-server -keyalg RSA \
+#-dname "CN=tiga, OU=LTG, O=organization, L=city, ST=province, C=china" \
+#-keypass 222222 \
+#-keystore /e/project/learing/config-server.keystore \
+#-storepass 111111 \
+#-validity 365 \
+
+#加密前缀
+#info:
+#  profile={cipher}13600fd6ac04ddfcbb0226a1f7ca2d8947d80be1e341f833b7e915e8381805afc88d6:
