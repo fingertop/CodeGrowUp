@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Slf4j
 @RestController
 public class TraceController {
@@ -19,8 +21,9 @@ public class TraceController {
 
 
     @RequestMapping(value = "/trace-two", method = RequestMethod.GET)
-    public String trace() {
-        log.info("===<call trace-2>===");
+    public String trace(HttpServletRequest request) {
+        log.info("===<call trace-2, TraceId={}, SpanId={}>===",
+                request.getHeader("X-B3-TraceId"), request.getHeader("X-B3-SpanId"));
         return "Trace";
     }
 
