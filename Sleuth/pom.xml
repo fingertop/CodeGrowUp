@@ -10,6 +10,7 @@
 
     <modules>
         <module>trace-one</module>
+        <module>trace-two</module>
     </modules>
 
     <properties>
